@@ -1,0 +1,63 @@
+@import '../../variables';
+
+.tags-container {
+    position: relative;
+}
+
+.tags {
+    //height: 25px;
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    border: 1px $border-color solid;
+    padding: 0;
+    margin: 0;
+    cursor: text;
+}
+
+.tags__tag {
+    display: flex;
+    align-items: center;
+    border: 1px $border-color solid;
+    margin: 2px;
+    padding-left: 1px;
+}
+
+.tags__input-container {
+    max-width: 100%;
+}
+
+.tags__input {
+    min-width: 25px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+}
+
+.tags__options {
+    width: 100%;
+    max-width: 200px;
+    max-height: 80px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+    background-color: white;
+    overflow: scroll;
+    border: 1px $border-color solid;
+    border-top: none;
+    z-index: 1;
+}
+
+.tags__options__option {
+    height: 20px;
+    padding-left: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tags__options__option:hover {
+    background-color: $hover-color;
+}

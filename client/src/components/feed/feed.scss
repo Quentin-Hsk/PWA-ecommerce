@@ -1,0 +1,53 @@
+@import '../../variables';
+
+.feed-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.feed__aside {
+    display: none;
+}
+
+@media only screen and (min-width: 800px) {
+    .feed__aside {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 90px;
+        width: 25%;
+    }
+
+    .feed-container {
+        width: 70%;
+        margin-left: 20px;
+    }
+}
+
+.feed__recommendation {
+    background-color: white;
+    border: 1px $border-color solid;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.feed__recommendation__title {
+    display: flex;
+    cursor: pointer;
+}
+
+.feed__recommendation__title-text {
+    margin-left: 5px;
+}
+
+.feed__recommendation__user {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.feed__picture {
+    border: 1px $border-color solid;
+    margin-top: 20px;
+}

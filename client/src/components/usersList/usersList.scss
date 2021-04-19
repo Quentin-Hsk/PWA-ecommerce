@@ -1,0 +1,24 @@
+.users-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.users-list__user {
+    margin: 10px;
+    display: flex;
+}
+
+.users-list__user-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.users-list__user-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}

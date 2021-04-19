@@ -1,0 +1,64 @@
+#containerIntro h3,
+#containerIntro p {
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  margin-left: 20px;
+}
+
+#justifyTopContainer {
+  margin-top: 60px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.root {
+  background-color: '#FCFAFA';
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  background-color: '#FCFAFA';
+}
+
+.space {
+  background-color: '#FCFAFA';
+  width: 100%;
+  height: 100%;
+}
+
+.userData {
+  float: left;
+}
+
+.imgFirst {
+  position: absolute;
+  top: -1rem;
+  max-width: 70%;
+  height: auto;
+}
+
+.profile__pictures-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .imgFirst {
+    position: static;
+  }
+}
+
+.imgSecond {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 20px;
+}

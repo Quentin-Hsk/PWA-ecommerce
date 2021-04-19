@@ -1,0 +1,105 @@
+@import '../../variables';
+
+.picture__author {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px $border-color solid;
+}
+
+.picture__description__author {
+    white-space: nowrap;
+}
+
+.picture__author__name,
+.picture__description__author,
+.picture__comment__author,
+.picture__post-comment__button {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.picture__description__hashtag {
+    color:rgba(var(--fe0,0,53,105),1);
+}
+
+.picture__author__pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.picture__pic {
+    width: 100%;
+}
+
+.picture__pic__like {
+    border-top: 1px $border-color solid;
+    padding: 0 10px;
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.picture__pic__like-list {
+    margin-left: 5px;
+}
+
+.picture__description {
+    display: flex;
+    padding: 0 10px;
+}
+
+.picture__mentionned {
+    padding: 0 10px;
+    display: flex;
+}
+
+.picture__mentionned__name {
+    cursor: pointer;
+    color:rgba(var(--fe0,0,53,105),1);
+}
+
+.picture__comments {
+    padding: 10px;
+    padding-top: 0;
+    max-height: 108px;
+    overflow-y: scroll;
+}
+
+.picture__post-comment {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px $border-color solid;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.picture__post-comment__input {
+    width: 100%;
+    border: none;
+    user-select: none;
+    outline: none;
+}
+
+.picture__post-comment__button {
+    color: #0095f6;
+    display: flex;
+    align-items: center;
+}
+
+.cursor__pointer {
+    cursor: pointer;
+}
+
+.cursor__pointer__list {
+    font-weight: 500;
+    cursor: pointer;;
+}
+
+.picture__like {
+    padding: 10px;
+}

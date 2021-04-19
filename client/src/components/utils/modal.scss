@@ -1,0 +1,34 @@
+@import '../../variables';
+
+.my-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 11;
+}
+
+.my-modal-container {
+    background-color: white;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.my-modal-title {
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px $border-color solid;
+}
+
+.my-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
