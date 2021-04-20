@@ -35,12 +35,13 @@
     "passport-jwt": "^4.0.0",
     "passport-local-mongoose": "^6.0.1",
     "pm2": "^4.3.0",
-    "socket.io": "^2.0.3",
     "sharp": "^0.25.2",
-    "typescript": "^3.7.5"
+    "socket.io": "^2.0.3",
+    "typescript": "^3.7.5",
+    "ts-node": "^8.8.2"
   },
   "devDependencies": {
-    "ts-node": "^8.6.2",
+    "ts-node": "^8.8.2",
     "ts-node-dev": "^1.0.0-pre.44"
   }
 }
