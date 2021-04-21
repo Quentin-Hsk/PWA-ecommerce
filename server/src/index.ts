@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 
 // TODO: Replace by containerized URL
-const databaseURL = process.env.MONGODB_URI || 'mongodb://localhost/ugram';
+const databaseURL = process.env.MONGODB_URI || `mongodb+srv://root:${process.env.DB_PASSWORD}@cluster0.hlv5v.mongodb.net/UGRAM?retryWrites=true&w=majority`;
 
 async function run() {
     try {
