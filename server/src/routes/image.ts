@@ -46,7 +46,7 @@ router.get("/search", async (req: express.Request, res: express.Response) => {
         .populate({ path: 'comments', populate: { path: 'author' } })
         .sort("-_id");
     let imageMap = [];
-    images.forEach(function (image) {
+    images.forEach(function (image: any) {
         let status = false;
         if (
             image.description &&
@@ -54,7 +54,7 @@ router.get("/search", async (req: express.Request, res: express.Response) => {
         ) {
             status = true;
         } else if (image.keywords) {
-            image.keywords.forEach(function (keyword) {
+            image.keywords.forEach(function (keyword: any) {
                 if (keyword.toLowerCase().indexOf((q as any).toLowerCase()) !== -1) {
                     status = true;
                 }

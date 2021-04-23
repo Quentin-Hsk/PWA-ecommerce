@@ -75,7 +75,7 @@ router.get(
         const me = await User.findById(req.session.passport.user._id);
         const images = await (me as any).findImages();
         const keywords = Array.from(
-            new Set(images.map((image) => image.keywords).reduce((acc, val) => acc.concat(val), [])).values()
+            new Set(images.map((image) => image.keywords).reduce(((acc: any), (val: any)) => acc.concat(val), [])).values()
         );
         const users = await User.find(
             { _id: { $ne: req.session.passport.user._id } },
@@ -90,8 +90,8 @@ router.get(
             const userImagesKeys = Array.from(
                 new Set(
                     imagesFound
-                        .map((image) => image.keywords)
-                        .reduce((acc, val) => acc.concat(val), [])
+                        .map((image: any) => image.keywords)
+                        .reduce((acc: any, val: any) => acc.concat(val), [])
                         .values()
                 )
             );

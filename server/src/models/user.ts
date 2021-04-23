@@ -54,10 +54,10 @@ userSchema.methods.findNotification = function () {
     return Notification.find({ to: this._id }, null, { sort: { createdAt: -1 } }).populate("to from image");
 }
 
-userSchema.methods.deleteNotifications = function (notifications) {
+userSchema.methods.deleteNotifications = function (notifications: any) {
     notifications = Promise.all(
         notifications.map(
-            async notif => await Notification.findOneAndDelete({ _id: notif._id, to: this._id })
+            async (notif: any) => await Notification.findOneAndDelete({ _id: notif._id, to: this._id })
         )
     );
 }
