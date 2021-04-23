@@ -73,7 +73,7 @@ router.get(
     "/me/recommendation",
     async (req: any, res: express.Response) => {
         const me = await User.findById(req.session.passport.user._id);
-        const images = await me.findImages();
+        const images = await (me as any).findImages();
         const keywords = Array.from(
             new Set(images.map((image) => image.keywords).reduce((acc, val) => acc.concat(val), [])).values()
         );
@@ -86,7 +86,7 @@ router.get(
         );
         const reco = [];
         for (let it = 0; it < users.length; it++) {
-            const imagesFound = await users[it].findImages();
+            const imagesFound = await (users[it] as any).findImages();
             const userImagesKeys = Array.from(
                 new Set(
                     imagesFound
