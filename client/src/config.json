@@ -3,6 +3,6 @@
         "serverUrl": "http://localhost:3001"
     },
     "prod": {
-        "serverUrl": "http://h2020-20-ugram-env1.eba-cev95idw.us-east-2.elasticbeanstalk.com"
+        "serverUrl": "https://pwaecommerce.herokuapp.com/"
     }
 }
