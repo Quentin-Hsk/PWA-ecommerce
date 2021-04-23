@@ -31,17 +31,17 @@ userSchema.pre("save", function save(next: Function) {
     bcrypt.genSalt(10, (err: Error, salt) => {
         if (err)
             return next(createError(500));
-        bcrypt.hash(this.password, salt, undefined, (err: mongoose.Error, hash: string) => {
+        bcrypt.hash((this as any).password, salt, undefined, (err: mongoose.Error, hash: string) => {
             if (err)
                 return next(createError(403));
-            this.password = hash;
+            (this as any).password = hash;
             next();
         });
     });
 });
 
 userSchema.methods.comparePassword = function (candidatePassword: string, next: Function) {
-    bcrypt.compare(candidatePassword, this.password, (err: mongoose.Error, isMatch: boolean) => {
+    bcrypt.compare(candidatePassword, (this as any).password, (err: mongoose.Error, isMatch: boolean) => {
         next(err, isMatch);
     });
 };
