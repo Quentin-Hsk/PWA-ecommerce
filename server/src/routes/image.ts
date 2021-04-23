@@ -73,7 +73,7 @@ router.get("/trending", async (req: express.Request, res: express.Response) => {
         .populate("mentions author comments likes")
         .populate({ path: 'comments', populate: { path: 'author' } })
         .sort("-_id");
-    const trending_hashtag = images.reduce((acc, it) => {
+    const trending_hashtag = images.reduce((acc: any, it: any) => {
         for (const hashtag of it.keywords)
             acc[hashtag] = acc[hashtag] + 1 || 1;
         return acc;
@@ -106,8 +106,8 @@ router.delete("/:id", async (req: express.Request, res: express.Response) => {
 router.put("/:id", async (req: express.Request, res: express.Response) => {
     try {
         if (req.body.likes) {
-            if (res.locals.requestedImage.likes.some(elem => elem && elem.id === req.body.likes._id)) {
-                req.body.likes = res.locals.requestedImage.likes.filter(elem => elem.id !== req.body.likes._id);
+            if (res.locals.requestedImage.likes.some((elem: any) => elem && elem.id === req.body.likes._id)) {
+                req.body.likes = res.locals.requestedImage.likes.filter((elem: any) => elem.id !== req.body.likes._id);
             } else {
                 req.body.likes = [...res.locals.requestedImage.likes, req.body.likes];
 
