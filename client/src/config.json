@@ -1,6 +1,6 @@
 {
     "dev": {
-        "serverUrl": "http://localhost:3001"
+        "serverUrl": "https://pwaecommerce.herokuapp.com"
     },
     "prod": {
         "serverUrl": "https://pwaecommerce.herokuapp.com"

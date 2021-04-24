@@ -29,7 +29,7 @@ export default (port: Number) =>
 
 export const clientConnected = [];
 
-/*io.on("connection", (socket) => {
+io.on("connection", (socket) => {
     socket.on("storeClientInfo", (info) => {
         clientConnected.push({ userId: info.userId, socketId: socket.id });
         console.log(clientConnected);
@@ -41,7 +41,7 @@ export const clientConnected = [];
         clientConnected.splice(index, 1);
         console.log(clientConnected);
     });
-});*/
+});
 
 app.use(bodyParser.json());
 app.use(cors());
